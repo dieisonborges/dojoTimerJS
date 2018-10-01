@@ -6,8 +6,12 @@ var evento = null;
 var contador = null;
 var minuto = 0;
 var segundo = 0;
+//AUDIO
 var audio = 0;
-var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+	    x.play(); 
+}
 
 function IniciarCronometro(valor){
 	this.evento = valor;
@@ -49,6 +53,7 @@ function IniciarCronometro(valor){
 		}else{
 
 			if(this.minuto < this.sminuto){
+				//AUDIO
 				if(audio<=2){
 					playAudio();
 					audio=audio+1;
@@ -132,19 +137,13 @@ function ResetarCronometro(){
 	document.getElementById('mostrarValor').classList.add('mostrarValor');
 	document.getElementById('exibe').classList.remove('Classexibe2');
 	document.getElementById('exibe').classList.add('Classexibe');
+	document.getElementById('mostrarValor').classList.remove('mostrarValor3');
+	document.getElementById('mostrarValor').classList.add('mostrarValor');
+
+	document.getElementById('ExibeSugestao').classList.remove('ExibeSugestao2');
+	document.getElementById('ExibeSugestao').classList.add('ExibeSugestao');
+
 
 	clearTimeout(this.contador);
 }
-
-function playAudio() { 
-	    x.play(); 
-} 
-
-function pauseAudio() { 
-	    x.pause(); 
-}
-
-
-
-	 
 
