@@ -1,0 +1,71 @@
+html, body {
+	height: 99%;
+}
+body {
+	background-color: #FFF;
+}
+.mostrarValor{
+	width: 100%;
+	text-align: center;
+	border:0px solid white;
+	font-size: 400px;
+}
+.mostrarValor2{
+	width: 100%;
+	text-align: center;
+	border:0px solid white;
+	font-size: 400px;
+	animation: fade 10000ms infinite;
+}
+
+.mostrarValor3{
+	width: 100%;
+	color: red;
+	text-align: center;
+	border:0px solid white;
+	font-size: 400px;
+	animation: fade 10000ms infinite;
+}
+
+.Classexibe{	
+	text-align:center;
+}
+.Classexibe2{
+	text-align:center;	
+	animation: fade 10000ms infinite;
+}
+
+.ExibeSugestao{	
+	display: none;
+}
+
+.ExibeSugestao2{
+	text-align: center;
+	width: 100%
+	height:300px;
+	color: red;
+	text-align:center;
+	font-size: 100px;
+
+}
+
+section {
+	width: 100%;
+}
+
+.btn {
+	
+	width:100px;
+}
+
+
+/*
+@keyframes fade {
+	0% {bakcground-color:white;}
+	25% {background-color:white;}
+	50% {background-color:white;}
+	75% {background-color:white;}
+	100% {background-color:white;}
+}
+
+*/
