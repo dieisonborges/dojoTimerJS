@@ -3,50 +3,84 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Dojo Timer JS</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script type="text/javascript" lang="javascript" src="script.js"></script>
 </head>
 
 <body>
+	<div class="container">
+		<div class="row">				
+					<fieldset class="Classexibe col-md-12" id="exibe"><legend>Dojo Timer JS</legend></fieldset>
 
-	<section>
-		<article>
-			<fieldset class="Classexibe" id="exibe"><legend>Dojo Timer JS</legend>
+						<p>
+							<input class="mostrarValor" type="text" id="mostrarValor" size="2" readonly="readonly" value="00:00"/>
+							<span class="ExibeSugestao" id="ExibeSugestao">Sugestões</span>
+						</p>
+						
+					</fieldset>
+					
+					<fieldset class=" col-md-4">
+						<legend>Comandos</legend>
+						<p>
+							<input class="btn btn-success" type="button" value="INICIAR" id="btnIniciar" onclick="IniciarCronometro('start')" /> 
+							<input class="btn" type="button" value="PAUSAR" id="btnPausar" onclick="PausarCronometro()" disabled="disabled" /> 
+							<input class="btn" type="button" value="RESETAR" id="btnResetar" onclick="ResetarCronometro()" disabled="disabled" /> 
+						</p>
+					</fieldset>
+					<fieldset class=" col-md-4">
+						<legend>Tempo Total</legend>
+						<p><label for="min">Minutos: &nbsp;&nbsp;</label><input type="text" id="min" size="2" maxlength="3" value="04" />
+						<label for="seg">Segundos: </label><input type="text" id="seg" size="2" maxlength="2" value="00" /></p>
+					</fieldset>
+					<fieldset class=" col-md-4">
+						<legend>Sugestões</legend>
+						<p><label for="smin">Minutos: &nbsp;&nbsp;</label><input type="text" id="smin" size="2" maxlength="3" value="01" /></p>	
+					</fieldset>
 
-				<p>
-					<input class="mostrarValor" type="text" id="mostrarValor" size="2" readonly="readonly" value="00:00"/>
-					<span class="ExibeSugestao" id="ExibeSugestao">Sugestões</span>
-				</p>
-				
-			</fieldset>
+
+					<hr class="hr col-md-12">
+					<div class=" col-md-12">
+						<legend>Testes</legend>	
+						<fieldset class=" col-md-4">
+							<legend>Teste de áudio Sugestões</legend>
+							<button class="btn" onclick="playAudio()" type="button">Play Audio</button>
+							<button class="btn" onclick="pauseAudio()" type="button">Pause Audio</button> 		
+						</fieldset>
+						<fieldset class=" col-md-4">
+							<legend>Teste de áudio Finish</legend>
+							<button class="btn" onclick="playAudioZ()" type="button">Play Audio</button>
+							<button class="btn" onclick="pauseAudioZ()" type="button">Pause Audio</button> 		
+						</fieldset>
+					</div>
+
+
+
+		</div>
+
+		<div class="row">
+			<hr class="hr col-md-12">
+			<footer class="col-md-12 text-right">By Dieison S. Borges</footer>
 			
-			<fieldset><legend>Comandos</legend>
-				<p>
-					<input class="btn" type="button" value="INICIAR" id="btnIniciar" onclick="IniciarCronometro('start')" /> 
-					<input class="btn" type="button" value="PAUSAR" id="btnPausar" onclick="PausarCronometro()" disabled="disabled" /> 
-					<input class="btn" type="button" value="RESETAR" id="btnResetar" onclick="ResetarCronometro()" disabled="disabled" /> 
-				</p>
-			</fieldset>
-			<fieldset>
-				<legend>Tempo Total</legend>
-				<p><label for="min">Minutos: &nbsp;&nbsp;</label><input type="text" id="min" size="2" maxlength="3" value="06" />
-				<label for="seg">Segundos: </label><input type="text" id="seg" size="2" maxlength="2" value="00" /></p>
-			</fieldset>
-			<fieldset>
-				<legend>Sugestões</legend>
-				<p><label for="smin">Minutos: &nbsp;&nbsp;</label><input type="text" id="smin" size="2" maxlength="3" value="02" />				
-			</fieldset>
-			<fieldset>
-				<legend>Teste de áudio</legend>
-				<button onclick="playAudio()" type="button">Play Audio</button>
-				<button onclick="pauseAudio()" type="button">Pause Audio</button> 		
-			</fieldset>
-		</article>
-	</section>
+		</div>
+
+
+
+	</div>
+
+	
+
+
 	
 
 	<audio id="myAudio">
-	  <source src="sirene-corte.mp3" type="audio/mpeg">
+	  <source src="sos-morse.mp3" type="audio/mpeg">
+	  Seu navegador não suporta HTML5.
+	</audio>
+
+	<audio id="myAudioZ">
+	  <source src="airplane-problem.mp3" type="audio/mpeg">
 	  Seu navegador não suporta HTML5.
 	</audio>
 	
@@ -61,7 +95,23 @@
 	function pauseAudio() { 
 	    x.pause(); 
 	} 
+
+	var z = document.getElementById("myAudioZ"); 
+
+	function playAudioZ() { 
+	    z.play(); 
+	} 
+
+	function pauseAudioZ() { 
+	    z.pause(); 
+	} 
 	</script>
+
+	<!-- jQuery library -->
+	<script src="jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="bootstrap.min.js"></script> 
 
 
 

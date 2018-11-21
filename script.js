@@ -8,9 +8,14 @@ var minuto = 0;
 var segundo = 0;
 //AUDIO
 var audio = 0;
+var audioz = 0;
 
 function playAudio() { 
 	    x.play(); 
+}
+
+function playAudioZ() { 
+	    z.play(); 
 }
 
 function IniciarCronometro(valor){
@@ -51,6 +56,7 @@ function IniciarCronometro(valor){
 			document.getElementById('exibe').classList.add('Classexibe2');
 			
 		}else{
+
 
 			if(this.minuto < this.sminuto){
 				//AUDIO
@@ -99,7 +105,11 @@ function IniciarCronometro(valor){
 				novoSegundo = "0" + this.segundo;
 			}else{
 				novoSegundo = this.segundo;
-			}			
+			}	
+
+			if((novoMinuto==0)&&(novoSegundo==1)){
+				playAudioZ();
+			}		
 
 			this.mostrarValor.value = novoMinuto + ":" + novoSegundo;
 		}
